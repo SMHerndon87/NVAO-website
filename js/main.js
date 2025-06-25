@@ -11,6 +11,30 @@ document.addEventListener('DOMContentLoaded', function() {
     initScrollEffects();
 });
 
+// ✅ NEW: Date & Time Display for Eastern Time (EDT/EST)
+function initDateTime() {
+    const dateElement = document.getElementById('currentDateTime');
+    if (!dateElement) return;
+
+    function updateTime() {
+        const now = new Date();
+        const options = {
+            timeZone: 'America/New_York',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric',
+            hour: 'numeric',
+            minute: '2-digit',
+            second: '2-digit'
+        };
+        const formatter = new Intl.DateTimeFormat('en-US', options);
+        dateElement.textContent = formatter.format(now);
+    }
+
+    updateTime(); // initial call
+    setInterval(updateTime, 1000); // refresh every second
+}
+
 // Navigation functionality
 function initNavigation() {
     const navToggle = document.getElementById('navToggle');
