@@ -238,71 +238,75 @@ p {
   border-radius: 2px;
 }
 
-/* Hero Section */
+/* Hero Section - Split Layout */
 .hero {
-  position: relative;
-  min-height: 80vh;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
   margin-top: 70px;
+  min-height: 80vh;
 }
 
-.hero-background {
-  position: absolute;
-  top: 0;
-  left: 0;
+.hero-split {
+  display: flex;
+  min-height: 80vh;
+  align-items: stretch; /* Ensures both columns have equal height */
+}
+
+.hero-left {
+  flex: 0.35;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  background-color: var(--white);
+}
+
+.hero-text-area {
+  max-width: 500px;
   width: 100%;
-  height: 100%;
-  z-index: -2;
+  background-color: rgba(255, 255, 255, 0.92);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-right {
+  flex: 0.65;
+  position: relative;
+  overflow: hidden;
+  display: flex; /* Added to ensure proper height handling */
+  align-items: stretch; /* Ensures image fills full height */
 }
 
 .hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(30, 58, 138, 0.8), rgba(59, 130, 246, 0.6));
-  z-index: -1;
-}
-
-.hero-content {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-}
-
-.hero-text {
-  max-width: 600px;
-  color: var(--white);
-  animation: fadeInUp 1s ease-out;
+  object-position: right;
+  display: block;
+  flex: 1; /* Ensures image takes full available space */
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
   line-height: 1.1;
+  color: var(--primary-blue);
 }
 
 .hero-subtitle {
   font-size: 1.5rem;
   font-weight: 500;
   margin-bottom: 1rem;
-  color: var(--light-blue);
+  color: var(--secondary-blue);
 }
 
 .hero-description {
   font-size: 1.1rem;
   margin-bottom: 2rem;
-  opacity: 0.9;
+  color: var(--text-medium);
 }
 
 .hero-buttons {
@@ -1693,12 +1697,38 @@ p {
     transform: translateY(-7px) rotate(-45deg);
   }
 
+  /* Hero Split Layout - Mobile Responsive */
+  .hero-split {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .hero-right {
+    order: -1;
+    min-height: 40vh;
+  }
+
+  .hero-left {
+    padding: 2rem 1rem;
+  }
+
+  .hero-text-area {
+    max-width: none;
+    padding: 2rem;
+  }
+
   .hero-title {
     font-size: 2rem;
+    text-align: center;
   }
 
   .hero-subtitle {
     font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .hero-description {
+    text-align: center;
   }
 
   .hero-buttons {
