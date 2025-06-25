@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Northern Virginia Academy of Ophthalmology</title>
+    <meta name="description" content="Contact the Northern Virginia Academy of Ophthalmology for membership information, event registration, and inquiries.">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-eye"></i>
+                <span>NVAO</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="events.html" class="nav-link">Events</a>
+                <a href="resources.html" class="nav-link">Resources</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact NVAO</h1>
+            <p>Get in touch with us for membership information, event registration, and professional inquiries</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Send Us a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="organization">Medical Practice/Organization</label>
+                            <input type="text" id="organization" name="organization">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="inquiryType">Type of Inquiry *</label>
+                            <select id="inquiryType" name="inquiryType" required>
+                                <option value="">Please select...</option>
+                                <option value="membership">Membership Information</option>
+                                <option value="events">Event Registration</option>
+                                <option value="cme">CME Credits/Education</option>
+                                <option value="resources">Educational Resources</option>
+                                <option value="general">General Information</option>
+                                <option value="technical">Technical Support</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required placeholder="Please provide details about your inquiry..."></textarea>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                I would like to receive email updates about NVAO events and news
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+
+                    <div class="form-success" id="formSuccess">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Message Sent Successfully!</h3>
+                        <p>Thank you for contacting NVAO. We will review your message and respond within 1-2 business days.</p>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h2>Contact Information</h2>
+                    
+                    <div class="info-card">
+                        <div class="info-header">
+                            <i class="fas fa-envelope"></i>
+                            <h3>Email Us</h3>
+                        </div>
+                        <div class="info-content">
+                            <p><strong>General Inquiries:</strong><br>info@nvao.org</p>
+                            <p><strong>Membership:</strong><br>membership@nvao.org</p>
+                            <p><strong>Events:</strong><br>events@nvao.org</p>
+                            <p><strong>Education/CME:</strong><br>education@nvao.org</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-header">
+                            <i class="fas fa-phone"></i>
+                            <h3>Call Us</h3>
+                        </div>
+                        <div class="info-content">
+                            <p><strong>Main Office:</strong><br>(703) 555-0123</p>
+                            <p><strong>Event Registration:</strong><br>(703) 555-0124</p>
+                            <p><strong>Office Hours:</strong><br>Monday - Friday<br>9:00 AM - 5:00 PM EST</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-header">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Location</h3>
+                        </div>
+                        <div class="info-content">
+                            <p>Northern Virginia Academy of Ophthalmology<br>
+                            Administrative Office<br>
+                            Northern Virginia Region<br><br>
+                            <em>We serve ophthalmologists and eye care professionals throughout Northern Virginia, including Arlington, Fairfax, Loudoun, and Prince William counties.</em></p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-header">
+                            <i class="fas fa-users"></i>
+                            <h3>Leadership Contacts</h3>
+                        </div>
+                        <div class="info-content">
+                            <p><strong>Dr. Michael Chen</strong><br>President<br>president@nvao.org</p>
+                            <p><strong>Dr. Sarah Johnson</strong><br>Vice President<br>vp@nvao.org</p>
+                            <p><strong>Dr. Robert Williams</strong><br>Secretary-Treasurer<br>treasurer@nvao.org</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section bg-light">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>How do I become a member of NVAO?</h4>
+                    <p>Membership is open to ophthalmologists, optometrists, and eye care professionals practicing in Northern Virginia. Contact us using the form above or email membership@nvao.org for application details and requirements.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How do I register for events?</h4>
+                    <p>Event registration can be completed by contacting us directly or through our member portal. We recommend registering early as space is often limited for our educational programs.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Are CME credits provided for events?</h4>
+                    <p>Yes, all our educational events provide AMA Category 1 CME credits. Certificates are issued upon completion of the educational activity and evaluation forms.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>What are the membership benefits?</h4>
+                    <p>Members enjoy access to high-quality CME programs, professional networking opportunities, educational resources, member directory (pending approval), and exclusive member-only content.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How often does NVAO meet?</h4>
+                    <p>We hold monthly clinical meetings, an annual spring symposium, seasonal workshops, and special events throughout the year. Check our events page for the complete calendar.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I access educational materials online?</h4>
+                    <p>Members have access to our online portal with recorded presentations, educational materials, and resource downloads. Contact us to set up your portal access.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section (Placeholder) -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Our Service Area</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Northern Virginia Region</h3>
+                    <p>NVAO serves ophthalmologists and eye care professionals throughout Northern Virginia, including:</p>
+                    <div class="service-areas">
+                        <div class="area">Arlington County</div>
+                        <div class="area">Fairfax County</div>
+                        <div class="area">Loudoun County</div>
+                        <div class="area">Prince William County</div>
+                        <div class="area">City of Alexandria</div>
+                        <div class="area">City of Falls Church</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-eye"></i>
+                        <span>NVAO</span>
+                    </div>
+                    <p>Northern Virginia Academy of Ophthalmology</p>
+                    <p>Advancing Excellence in Eye Care</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About NVAO</a></li>
+                        <li><a href="events.html">Events & Meetings</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@nvao.org</li>
+                        <li><i class="fas fa-phone"></i> (703) 555-0123</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Northern Virginia</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Northern Virginia Academy of Ophthalmology. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
